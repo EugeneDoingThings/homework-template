@@ -57,7 +57,8 @@ class Computer(object):
                 print(s)
                 if '_' not in s:
                     print('YOU WON! \nAttempts left: {} \n'
-                          'Number of guessed letters: {} '.format(attempts, amount))
+                          'Number of guessed letters: {} '
+                          .format(attempts, amount))
                     Human.get_status('win', human_check)
                     break
                 else:
@@ -113,8 +114,10 @@ class Human(Computer, Statistics):
 
 
 def main():
-    print('Select mode:\n 1. Playing with computer \n'
-          '2. Playing with human \n Enter. Exit')
+    print('Select mode:\n'
+          '1. Playing with computer \n'
+          '2. Playing with human \n'
+          'Enter. Exit')
     m = input()
     mode = GameStart(m)
     mode.set_mode()
