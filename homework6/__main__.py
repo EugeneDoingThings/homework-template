@@ -77,13 +77,13 @@ class Computer(object):
                     Human.get_status('lose', human_check)
                     break
 
-                    
+
 class Statistics(object):
     p1 = 0
     p2 = 0
     rounds = 1
 
-    
+
 class Human(Computer, Statistics):
     def get_status(self, human_check):
             if human_check is True:
@@ -111,7 +111,7 @@ class Human(Computer, Statistics):
             else:
                 pass
 
-            
+
 def main():
     print('Select mode:\n 1. Playing with computer \n'
           '2. Playing with human \n Enter. Exit')
@@ -119,7 +119,7 @@ def main():
     mode = GameStart(m)
     mode.set_mode()
 
-    
+
 if __name__ == '__main__':
         try:
             main()
