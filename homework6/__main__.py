@@ -57,7 +57,7 @@ class Computer(object):
                 print(s)
                 if '_' not in s:
                     print('YOU WON! \nAttempts left: {} \n'
-                    'Number of guessed letters: {} '.format(attempts, amount))
+                        'Number of guessed letters: {} '.format(attempts, amount))
                     Human.get_status('win', human_check)
                     break
                 else:
