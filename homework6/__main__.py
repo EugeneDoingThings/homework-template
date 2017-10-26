@@ -2,7 +2,7 @@ import json
 import random as r
 
 
-class GameStart(object): # mode selection class
+class GameStart(object):
     def __init__(self, mode):
         self.mode = mode
 
@@ -77,16 +77,14 @@ class Computer(object):
                     Human.get_status('lose', human_check)
                     break
 
-                    
 class Statistics(object):
     p1 = 0
     p2 = 0
     rounds = 1
 
-    
 class Human(Computer, Statistics):
     def get_status(self, human_check):
-            if human_check == True:
+            if human_check is True:
                 while (Statistics.p1 < 2) and (Statistics.p2 < 2):
                     if Statistics.rounds % 2 == 1:
                         if self == 'lose':
@@ -98,7 +96,7 @@ class Human(Computer, Statistics):
                             Statistics.p1 += 1
                         elif self == 'win':
                             Statistics.p2 += 1
-                    print ('Score {} : {}'.format(Statistics.p1, Statistics.p2))
+                    print('Score {} : {}'.format(Statistics.p1, Statistics.p2))
                     Statistics.rounds += 1
                     if Statistics.p1 == 2:
                         print('P1 WON!')
@@ -111,9 +109,9 @@ class Human(Computer, Statistics):
             else:
                 pass
             
-            
 def main():
-    print('Select mode:\n 1. Playing with computer \n 2. Playing with human \n Enter. Exit')
+    print('Select mode:\n 1. Playing with computer \n'
+          '2. Playing with human \n Enter. Exit')
     m = input()
     mode = GameStart(m)
     mode.set_mode()
