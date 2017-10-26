@@ -114,7 +114,9 @@ class Human(Computer, Statistics):
 
 def main():
     print('Select mode:\n 1. Playing with computer \n'
-          '2. Playing with human \n Enter. Exit')
+          '2. Playing with human \n'
+          'Enter. Exit'
+         )
     m = input()
     mode = GameStart(m)
     mode.set_mode()
