@@ -77,11 +77,13 @@ class Computer(object):
                     Human.get_status('lose', human_check)
                     break
 
+                    
 class Statistics(object):
     p1 = 0
     p2 = 0
     rounds = 1
 
+    
 class Human(Computer, Statistics):
     def get_status(self, human_check):
             if human_check is True:
@@ -100,7 +102,7 @@ class Human(Computer, Statistics):
                     Statistics.rounds += 1
                     if Statistics.p1 == 2:
                         print('P1 WON!')
-                        return  True
+                        return True
                     elif Statistics.p2 == 2:
                         print('P2 WON!')
                         return True
@@ -108,6 +110,7 @@ class Human(Computer, Statistics):
                         GameStart('2').set_mode()
             else:
                 pass
+
             
 def main():
     print('Select mode:\n 1. Playing with computer \n'
@@ -116,6 +119,7 @@ def main():
     mode = GameStart(m)
     mode.set_mode()
 
+    
 if __name__ == '__main__':
         try:
             main()
