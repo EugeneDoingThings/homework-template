@@ -40,11 +40,15 @@ class BaseItem(object):
 
 class ToDoItem(BaseItem):
     def __str__(self):
+<<<<<<< HEAD
         if self.done:
             done = '+'
         else:
             done = '-'
         return '{} ToDo: {}'.format(done, self.heading)
+=======
+        return 'ToDo: {}'.format(self.heading)
+>>>>>>> upstream/master
 
     @classmethod
     def construct(cls):
@@ -58,12 +62,16 @@ class ToBuyItem(BaseItem):
         self.price = price
 
     def __str__(self):
+<<<<<<< HEAD
         if self.done:
             done = '+'
         else:
             done = '-'
         return '{} ToBuy: {} for {}'.format(
             done,
+=======
+        return 'ToBuy: {} for {}'.format(
+>>>>>>> upstream/master
             self.heading,
             self.price,
         )
@@ -73,6 +81,7 @@ class ToBuyItem(BaseItem):
         heading = input('Input heading: ')
         price = input('Input price: ')
         return cls(heading, price)
+<<<<<<< HEAD
 
 
 class ToReadItem(BaseItem):
@@ -96,3 +105,5 @@ class ToReadItem(BaseItem):
         heading = input('Input heading: ')
         url = input('Input url: ')
         return cls(heading, url)
+=======
+>>>>>>> upstream/master
