@@ -79,7 +79,6 @@ class ExitCommand(BaseCommand):
 
     def perform(self, _store):
         raise UserExitException('See you next time!')
-<<<<<<< HEAD
 
 
 class DoneCommand(BaseCommand):
@@ -144,5 +143,3 @@ class UndoneCommand(BaseCommand):
         selection_item.done = False
 
         print('{}'.format(str(selection_item)))
-=======
->>>>>>> upstream/master
